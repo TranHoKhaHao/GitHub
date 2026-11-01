@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-fixed": "#d7e3ff","surface-container-highest": "#d3e4fe","tertiary-fixed-dim": "#ffb95f","background": "#f8f9ff","primary-container": "#0b74e5","surface-dim": "#cbdbf5","surface-container-lowest": "#ffffff","on-secondary-fixed-variant": "#005236","on-primary-fixed": "#001b3f","secondary": "#006c49","on-tertiary-fixed-variant": "#653e00","tertiary-container": "#a66900","surface-tint": "#005cba","on-tertiary-fixed": "#2a1700","error-container": "#ffdad6","surface": "#f8f9ff","on-background": "#0b1c30","on-error-container": "#93000a","secondary-container": "#6cf8bb","on-error": "#ffffff","surface-variant": "#d3e4fe","on-surface": "#0b1c30","secondary-fixed": "#6ffbbe","on-tertiary": "#ffffff","on-secondary-fixed": "#002113","surface-container-high": "#dce9ff","error": "#ba1a1a","surface-container": "#e5eeff","primary-fixed-dim": "#abc7ff","on-secondary": "#ffffff","tertiary-fixed": "#ffddb8","outline-variant": "#c1c6d6","on-primary-container": "#ffffff","on-primary-fixed-variant": "#00458e","on-secondary-container": "#00714d","inverse-surface": "#213145","on-primary": "#ffffff","secondary-fixed-dim": "#4edea3","on-tertiary-container": "#ffffff","inverse-primary": "#abc7ff","outline": "#717785","surface-bright": "#f8f9ff","inverse-on-surface": "#eaf1ff","primary": "#005cb9","on-surface-variant": "#414753","tertiary": "#845300","surface-container-low": "#eff4ff"
+      },
+      "borderRadius": {"DEFAULT": "0.125rem","lg": "0.25rem","xl": "0.5rem","full": "0.75rem"},
+      "spacing": {"margin": "1rem","space-sm": "0.5rem","gutter-desktop": "1.5rem","space-lg": "1.25rem","space-xs": "0.25rem","space-xl": "2rem","gutter": "1rem","margin-desktop": "2rem","space-md": "0.75rem"},
+      "fontFamily": {"data-metric": ["JetBrains Mono"],"headline-md": ["Be Vietnam Pro"],"label-sm": ["JetBrains Mono"],"headline-lg": ["Be Vietnam Pro"],"body-md": ["Be Vietnam Pro"],"body-sm": ["Be Vietnam Pro"],"headline-sm": ["Be Vietnam Pro"],"headline-xl": ["Be Vietnam Pro"],"body-lg": ["Be Vietnam Pro"],"label-md": ["JetBrains Mono"]},
+      "fontSize": {"data-metric": ["28px",{"lineHeight": "36px","fontWeight": "700"}],"headline-md": ["20px",{"lineHeight": "28px","fontWeight": "600"}],"label-sm": ["11px",{"lineHeight": "14px","fontWeight": "500"}],"headline-lg": ["24px",{"lineHeight": "32px","fontWeight": "700"}],"body-md": ["14px",{"lineHeight": "20px","fontWeight": "400"}],"body-sm": ["12px",{"lineHeight": "16px","fontWeight": "400"}],"headline-sm": ["16px",{"lineHeight": "24px","fontWeight": "600"}],"headline-xl": ["32px",{"lineHeight": "40px","fontWeight": "700"}],"body-lg": ["16px",{"lineHeight": "24px","fontWeight": "400"}],"label-md": ["13px",{"lineHeight": "18px","fontWeight": "500"}]}
+    },
+  },
+}
+</script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+
+<!-- ═══════════════ SIDEBAR (giữ nguyên) ═══════════════ -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto">
+  <div class="flex flex-col">
+    <div class="p-space-lg bg-surface-container-low">
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary text-[28px]">menu_book</span>
+        <span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Tiki Big Data</span>
+      </div>
+      <div class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Capstone Project • Member 4</div>
+    </div>
+    <div class="px-space-md py-space-sm">
+      <div class="px-space-sm py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase">Phân Hệ Quản Trị</div>
+      <nav class="flex flex-col gap-space-xs mt-space-xs">
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded" href="dashboard.html">
+          <span class="material-symbols-outlined text-[20px]">query_stats</span><span>Power BI Dashboard</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="quanlydulieu.html">
+          <span class="material-symbols-outlined text-[20px]">dataset</span><span>Quản Lý Dữ Liệu (CRUD)</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="locdulieu.html">
+          <span class="material-symbols-outlined text-[20px]">manage_search</span><span>Lọc &amp; Tìm Kiếm</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="dudoan.html">
+          <span class="material-symbols-outlined text-[20px]">psychology</span><span>Phân Tích Cụm &amp; Bất Thường</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="quantri.html">
+          <span class="material-symbols-outlined text-[20px]">settings</span><span>Hệ Thống &amp; Quản Trị</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="saoluu.html">
+          <span class="material-symbols-outlined text-[20px]">cloud_sync</span><span>Sao Lưu &amp; Phục Hồi</span>
+        </a>
+        <a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="xuatbaocao.html">
+          <span class="material-symbols-outlined text-[20px]">file_download</span><span>Kết Xuất Báo Cáo</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bộ lọc nhanh (giữ nguyên) -->
+    <div class="px-space-md py-space-sm bg-surface-container-low mx-space-md rounded my-space-xs flex flex-col gap-space-md">
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-label-sm text-on-surface uppercase">Bộ Lọc Nhanh</span>
+        <span class="material-symbols-outlined text-outline text-[16px]">tune</span>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <label class="font-label-sm text-label-sm text-on-surface-variant">Tìm Tên Sách</label>
+        <div class="relative flex items-center">
+          <input id="dash-sidebar-search" class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-xs pl-8 rounded font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Tìm kiếm tên sách..." type="text"/>
+          <span class="material-symbols-outlined absolute left-2 text-outline text-[16px]">search</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <div class="flex justify-between items-center">
+          <label class="font-label-sm text-label-sm text-on-surface-variant">Khoảng Giá</label>
+          <span class="font-label-sm text-label-sm text-primary font-bold" id="dash-price-label">5k - 3.5M</span>
+        </div>
+        <input id="dash-price-slider" class="w-full accent-primary cursor-pointer" max="3500000" min="5000" type="range" value="3500000"/>
+        <div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm"><span>5.000đ</span><span>3.500.000đ</span></div>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <div class="flex justify-between items-center">
+          <label class="font-label-sm text-label-sm text-on-surface-variant">Mức Giảm Giá</label>
+          <span class="font-label-sm text-label-sm text-secondary font-bold" id="dash-discount-label">≥ 0%</span>
+        </div>
+        <input id="dash-discount-slider" class="w-full accent-secondary cursor-pointer" max="60" min="0" type="range" value="0"/>
+        <div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm"><span>0%</span><span>60%</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="p-space-md">
+    <button id="dash-export-csv-btn" class="w-full bg-primary text-on-primary py-space-sm px-space-md rounded font-headline-sm text-headline-sm flex items-center justify-center gap-space-sm shadow-sm hover:bg-on-primary-fixed-variant transition-colors" type="button">
+      <span class="material-symbols-outlined text-[18px]">download</span><span>Export CSV Report</span>
+    </button>
+  </div>
+</aside>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<div class="pl-72">
+  <header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-desktop">
+    <div class="flex items-center gap-space-md w-96">
+      <div class="relative w-full flex items-center">
+        <span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span>
+        <input id="dash-top-search" class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-md py-space-xs rounded font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Tra cứu ISBN, tác giả, nhà xuất bản..." type="text"/>
+      </div>
+    </div>
+    <div class="flex items-center gap-space-lg">
+      <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-secondary-container text-on-secondary-container rounded font-label-sm text-label-sm">
+        <span class="material-symbols-outlined text-[16px]">cloud_done</span>
+        <span class="font-bold uppercase tracking-wider">MongoDB Atlas Synced (<span id="header-total-sku">1.267</span> SKU)</span>
+      </div>
+      <div class="flex items-center gap-space-sm pl-space-md">
+        <div class="flex flex-col text-right">
+          <span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Admin Operator</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Data Analytics Lead</span>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative pt-16 w-full px-margin-desktop bg-surface">
+    <div class="flex flex-col w-full pb-space-xl">
+
+      <!-- Breadcrumb + Title (giữ nguyên) -->
+      <section class="py-space-md flex flex-col gap-space-xs">
+        <div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+          <span class="hover:text-primary cursor-pointer transition-colors">Trang Chủ</span>
+          <span>/</span>
+          <span class="hover:text-primary cursor-pointer transition-colors">Analytics Engine</span>
+          <span>/</span>
+          <span class="text-primary font-bold">Power BI Dashboard</span>
+        </div>
+        <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md mt-space-xs">
+          <div>
+            <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight flex items-center gap-space-sm">
+              <span>Báo Cáo Phân Tích Dữ Liệu Kinh Doanh Sách Tiki</span>
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-4xl">
+              Tổng quan chỉ số thị trường, hành vi người tiêu dùng, phân cụm K-Means và phát hiện bất thường bằng Isolation Forest từ dữ liệu sách Tiki.
+            </p>
+          </div>
+          <div class="flex items-center gap-space-sm self-start xl:self-auto shrink-0">
+            <div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high rounded shadow-sm text-on-surface">
+              <span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">MongoDB Real-Time Sync</span>
+              <span class="text-outline-variant font-label-sm">|</span>
+              <span class="font-label-sm text-label-sm text-primary font-bold">Vừa xong</span>
+            </div>
+            <button id="dash-refresh-btn" class="p-space-xs bg-surface-container-lowest text-primary rounded shadow-sm hover:bg-primary-fixed transition-all" title="Làm mới dữ liệu" type="button">
+              <span class="material-symbols-outlined text-[20px]">refresh</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPI cards (giữ nguyên) -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mt-space-md">
+        <div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">TỔNG SẢN PHẨM (CATALOG)</span>
+              <div class="font-data-metric text-data-metric text-on-surface mt-space-xs tracking-tight"><span id="stat-total-books">—</span> <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">cuốn</span></div>
+            </div>
+            <div class="w-12 h-12 rounded bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">library_books</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            <span class="flex items-center text-secondary font-bold bg-secondary-container px-space-xs py-0.5 rounded">
+              <span class="material-symbols-outlined text-[14px]">arrow_upward</span> Live
+            </span>
+            <span>100% verified Tiki data</span>
+          </div>
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+        </div>
+        <div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">GIÁ BÁN TRUNG BÌNH</span>
+              <div class="font-data-metric text-data-metric text-on-surface mt-space-xs tracking-tight"><span id="stat-avg-price">—</span></div>
+            </div>
+            <div class="w-12 h-12 rounded bg-surface-container text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">payments</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            <span class="flex items-center text-primary font-bold bg-surface-container-high px-space-xs py-0.5 rounded">
+              <span class="material-symbols-outlined text-[14px]">trending_down</span> Live
+            </span>
+            <span>Mức giá tối ưu phân phối</span>
+          </div>
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container-highest/40 rounded-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+        </div>
+        <div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">TỶ LỆ GIẢM GIÁ TRUNG BÌNH</span>
+              <div class="font-data-metric text-data-metric text-on-surface mt-space-xs tracking-tight"><span id="stat-avg-discount">—</span></div>
+            </div>
+            <div class="w-12 h-12 rounded bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">local_offer</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            <span class="flex items-center text-tertiary font-bold bg-tertiary-fixed px-space-xs py-0.5 rounded">
+              <span class="material-symbols-outlined text-[14px]">bolt</span> Live
+            </span>
+            <span>Chiến dịch Flash Deal &amp; Coupon</span>
+          </div>
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-fixed-dim/20 rounded-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+        </div>
+        <div class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">ĐIỂM ĐÁNH GIÁ TRUNG BÌNH</span>
+              <div class="font-data-metric text-data-metric text-on-surface mt-space-xs tracking-tight flex items-baseline gap-1">
+                <span class="text-secondary text-[24px]">★</span> <span id="stat-avg-rating">—</span> <span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">/ 5.0</span>
+              </div>
+            </div>
+            <div class="w-12 h-12 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">verified</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+            <span class="flex items-center text-secondary font-bold bg-secondary-container px-space-xs py-0.5 rounded">Live</span>
+            <span>Phản hồi khách hàng tích cực</span>
+          </div>
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary-container/40 rounded-full pointer-events-none group-hover:scale-110 transition-transform"></div>
+        </div>
+      </section>
+
+      <!-- Scatter + Donut (giữ nguyên) -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mt-space-xl">
+        <div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-space-xs">
+            <div>
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-[20px]">scatter_plot</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tương Quan Giảm Giá &amp; Lượt Đánh Giá</h2>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Phân tích hồi quy giữa Mức giảm giá (%) và Lượt Review. Bán kính: Giá bán; Màu sắc: Rating Tiki.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 self-start sm:self-auto font-label-sm text-label-sm">
+              <span class="inline-flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded text-on-surface-variant">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> 4.8 - 5.0
+              </span>
+              <span class="inline-flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded text-on-surface-variant">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary"></span> 4.5 - 4.7
+              </span>
+              <span class="inline-flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded text-on-surface-variant">
+                <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> &lt; 4.5
+              </span>
+            </div>
+          </div>
+          <div class="relative w-full h-[320px] bg-surface-container-low rounded p-space-sm mt-space-xs flex flex-col justify-between select-none">
+            <svg id="dashboard-scatter-svg" class="w-full h-full overflow-visible" viewbox="0 0 650 280">
+              <defs>
+                <lineargradient id="gridGrad" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#abc7ff" stop-opacity="0.3"></stop>
+                  <stop offset="100%" stop-color="#abc7ff" stop-opacity="0.05"></stop>
+                </lineargradient>
+              </defs>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="620" y1="240" y2="240"></line>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="620" y1="180" y2="180"></line>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="620" y1="120" y2="120"></line>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="620" y1="60" y2="60"></line>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="50" x2="620" y1="20" y2="20"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="42" y="244">0</text>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="42" y="184">1.250</text>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="42" y="124">2.500</text>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="42" y="64">3.750</text>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="42" y="24">5.000+</text>
+              <line stroke="#717785" stroke-width="1.5" x1="50" x2="50" y1="20" y2="240"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="50" y="258">0%</text>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="164" x2="164" y1="20" y2="240"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="164" y="258">15%</text>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="278" x2="278" y1="20" y2="240"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="278" y="258">30%</text>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="392" x2="392" y1="20" y2="240"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="392" y="258">45%</text>
+              <line stroke="#c1c6d6" stroke-dasharray="3,3" stroke-width="1" x1="506" x2="506" y1="20" y2="240"></line>
+              <text fill="#717785" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="506" y="258">60%</text>
+            </svg>
+            <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-space-xs pt-1">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">arrow_downward</span> Trục tung: Số lượng Đánh giá (Reviews)</span>
+              <span class="flex items-center gap-1">Trục hoành: Mức độ giảm giá chiết khấu (%)<span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Phân Bố 4 Cụm Phân Nhóm K-Means</h2>
+              </div>
+              <span class="font-label-sm text-label-sm px-space-xs py-0.5 bg-surface-container text-on-surface-variant rounded">k = 4</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tỷ lệ SKU theo đặc tính Giá, Chiết khấu &amp; Độ tiếp cận.</p>
+          </div>
+          <div class="relative flex items-center justify-center my-space-md">
+            <svg class="w-48 h-48 transform -rotate-90" viewbox="0 0 200 200">
+              <circle cx="100" cy="100" fill="none" r="75" stroke="#eff4ff" stroke-width="26"></circle>
+              <circle data-cluster-arc="2" class="hover:opacity-90 transition-opacity" cx="100" cy="100" fill="none" r="75" stroke="#005cb9" stroke-dasharray="251.6 471.2" stroke-dashoffset="0" stroke-width="26"></circle>
+              <circle data-cluster-arc="1" class="hover:opacity-90 transition-opacity" cx="100" cy="100" fill="none" r="75" stroke="#006c49" stroke-dasharray="208.2 471.2" stroke-dashoffset="-251.6" stroke-width="26"></circle>
+              <circle data-cluster-arc="3" class="hover:opacity-90 transition-opacity" cx="100" cy="100" fill="none" r="75" stroke="#ffb95f" stroke-dasharray="7.5 471.2" stroke-dashoffset="-459.8" stroke-width="26"></circle>
+              <circle data-cluster-arc="0" class="hover:opacity-90 transition-opacity" cx="100" cy="100" fill="none" r="75" stroke="#845300" stroke-dasharray="4.2 471.2" stroke-dashoffset="-467.3" stroke-width="26"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="font-data-metric text-data-metric text-on-surface leading-none" id="donut-total">—</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 tracking-wider">Tiki SKU Total</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+            <div class="p-space-sm bg-surface-container-low rounded flex flex-col justify-between">
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-sm bg-primary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Cụm 2: Khuyến Mãi / Deal</span></div>
+              <div class="flex items-baseline justify-between mt-space-xs"><span class="font-data-metric text-[18px] text-primary font-bold" id="cluster-pct-2">—</span><span class="font-label-sm text-label-sm text-on-surface-variant"><span id="cluster-count-2">—</span> sách</span></div>
+            </div>
+            <div class="p-space-sm bg-surface-container-low rounded flex flex-col justify-between">
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-sm bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Cụm 1: Phổ Thông / Nguyên Giá</span></div>
+              <div class="flex items-baseline justify-between mt-space-xs"><span class="font-data-metric text-[18px] text-secondary font-bold" id="cluster-pct-1">—</span><span class="font-label-sm text-label-sm text-on-surface-variant"><span id="cluster-count-1">—</span> sách</span></div>
+            </div>
+            <div class="p-space-sm bg-surface-container-low rounded flex flex-col justify-between">
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-sm bg-tertiary-fixed-dim shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Cụm 3: Combo / Cao Cấp</span></div>
+              <div class="flex items-baseline justify-between mt-space-xs"><span class="font-data-metric text-[18px] text-tertiary font-bold" id="cluster-pct-3">—</span><span class="font-label-sm text-label-sm text-on-surface-variant"><span id="cluster-count-3">—</span> sách</span></div>
+            </div>
+            <div class="p-space-sm bg-surface-container-low rounded flex flex-col justify-between">
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 rounded-sm bg-tertiary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Cụm 0: Best Seller Giá Rẻ</span></div>
+              <div class="flex items-baseline justify-between mt-space-xs"><span class="font-data-metric text-[18px] text-tertiary-container font-bold" id="cluster-pct-0">—</span><span class="font-label-sm text-label-sm text-on-surface-variant"><span id="cluster-count-0">—</span> sách</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ TABLE BOOKS CATALOG (giữ nguyên) ═══════════════ -->
+      <section class="mt-space-xl bg-surface-container-lowest rounded shadow-sm overflow-hidden flex flex-col">
+        <div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest">
+          <div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-primary text-[22px]">dataset</span>
+              <h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Danh Sách Sản Phẩm Sách Tiki Đã Lọc (Tiki Books Catalog)</h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dữ liệu đồng bộ từ MongoDB Atlas sau bước làm sạch và gán nhãn phân cụm tự động.</p>
+          </div>
+          <div class="flex items-center gap-space-xs shrink-0 flex-wrap">
+            <div class="relative">
+              <input id="dash-table-search" class="bg-surface-container-low text-on-surface pl-8 pr-3 py-1.5 rounded font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary w-52" placeholder="Tìm kiếm nhanh tên, SKU..." type="text"/>
+              <span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[16px]">search</span>
+            </div>
+            <button id="dash-filter-cluster-btn" class="flex items-center gap-1 px-3 py-1.5 bg-surface-container-low text-on-surface rounded font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+              <span class="material-symbols-outlined text-[16px]">filter_alt</span><span id="dash-filter-cluster-label">Tất Cả Cụm</span>
+            </button>
+            <button id="dash-export-table-btn" class="flex items-center gap-1 px-3 py-1.5 bg-primary-container text-on-primary-container rounded font-label-md text-label-md hover:opacity-90 transition-all shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[16px]">file_download</span><span>Xuất File</span>
+            </button>
+          </div>
+        </div>
+        <div class="w-full overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant select-none">
+                <th class="py-space-sm px-space-md">Mã SKU</th>
+                <th class="py-space-sm px-space-md">Tên Sách &amp; Tác Giả</th>
+                <th class="py-space-sm px-space-md text-right">Giá Bán</th>
+                <th class="py-space-sm px-space-md text-center">Giảm Giá</th>
+                <th class="py-space-sm px-space-md text-right">Lượt Đánh Giá</th>
+                <th class="py-space-sm px-space-md text-center">Rating</th>
+                <th class="py-space-sm px-space-md">Phân Cụm (K-Means)</th>
+                <th class="py-space-sm px-space-md text-center">Thao Tác</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard-books-body" class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface"></tbody>
+          </table>
+        </div>
+        <div id="dashboard-table-footer" class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"></div>
+      </section>
+
+      <!-- ═══════════════ ANOMALY SECTION (MỚI) ═══════════════ -->
+      <section class="mt-space-xl bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col gap-space-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+          <div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-error text-[24px]">warning</span>
+              <h2 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                Top sản phẩm bất thường (Isolation Forest)
+              </h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Các SKU có tổ hợp chỉ số thương mại lệch khỏi mẫu chung — nghi vấn seeding, giá sai, deal quá sâu.
+            </p>
+          </div>
+          <div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+            <span id="dashboard-anomaly-summary" class="font-label-sm text-label-sm px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-semibold">
+              Đang tải…
+            </span>
+            <button id="dash-refresh-anomaly-btn" class="p-1.5 bg-surface-container-lowest text-error rounded shadow-sm hover:bg-error-container transition-all" title="Làm mới anomalies" type="button">
+              <span class="material-symbols-outlined text-[18px]">refresh</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant select-none">
+                <th class="py-space-sm px-space-md">Mã SKU</th>
+                <th class="py-space-sm px-space-md min-w-[240px]">Tên Sách</th>
+                <th class="py-space-sm px-space-md text-right">Giá Bán</th>
+                <th class="py-space-sm px-space-md text-center">Giảm Giá</th>
+                <th class="py-space-sm px-space-md text-right">Lượt Review</th>
+                <th class="py-space-sm px-space-md text-center">Rating</th>
+                <th class="py-space-sm px-space-md text-center">Score</th>
+                <th class="py-space-sm px-space-md min-w-[200px]">Lý Do</th>
+              </tr>
+            </thead>
+            <tbody id="dashboard-anomaly-body" class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+              <tr><td colspan="8" class="text-center py-space-lg text-on-surface-variant">Đang tải danh sách anomalies…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script src="tiki_books_data.js"></script>
+<script src="books-core.js"></script>
+<script src="dashboard-app.js"></script>
+</body>
+</html>

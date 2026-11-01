@@ -1,0 +1,137 @@
+{
+  "model_type": "IsolationForest",
+  "sklearn_version": "1.9.1",
+  "n_estimators": 150,
+  "contamination": 0.05,
+  "random_state": 42,
+  "features": [
+    "price",
+    "discount_rate",
+    "review_count",
+    "rating",
+    "review_per_rating"
+  ],
+  "n_train": 1267,
+  "n_anomalies": 64,
+  "contamination_actual_pct": 5.05,
+  "score_min": -0.19507931414905377,
+  "score_max": 0.19837845670111587,
+  "score_mean": 0.13855449485658566,
+  "score_median": 0.16144165121983772,
+  "score_deciles": [
+    -0.1951,
+    0.0624,
+    0.1037,
+    0.1359,
+    0.1523,
+    0.1614,
+    0.1711,
+    0.1773,
+    0.1836,
+    0.1881,
+    0.1984
+  ],
+  "cluster_distribution": {},
+  "top_anomalies": [
+    {
+      "sku": "",
+      "title": "Sách Cây Cam Ngọt Của Tôi",
+      "price": 87500.0,
+      "discount_rate": 30.0,
+      "review_count": 13530.0,
+      "rating": 5.0,
+      "anomaly_score": -0.19507931414905377,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Rèn Luyện Tư Duy Phản Biện",
+      "price": 84800.0,
+      "discount_rate": 39.0,
+      "review_count": 4848.0,
+      "rating": 4.8,
+      "anomaly_score": -0.1709560747776382,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Tâm Lý Học - Phác Họa Chân Dung Kẻ Phạm Tội",
+      "price": 108750.0,
+      "discount_rate": 25.0,
+      "review_count": 6153.0,
+      "rating": 4.8,
+      "anomaly_score": -0.16646600244946974,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Nhà Giả Kim (Tái Bản)",
+      "price": 66500.0,
+      "discount_rate": 30.0,
+      "review_count": 6090.0,
+      "rating": 5.0,
+      "anomaly_score": -0.16518997621197817,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Thiên Tài Bên Trái, Kẻ Điên Bên Phải (Tái Bản)",
+      "price": 128880.0,
+      "discount_rate": 28.0,
+      "review_count": 5496.0,
+      "rating": 4.8,
+      "anomaly_score": -0.1647700948298888,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Boxset Harry Potter - Tiếng Việt (Trọn Bộ 7 Tập)",
+      "price": 1298000.0,
+      "discount_rate": 26.0,
+      "review_count": 1608.0,
+      "rating": 4.7,
+      "anomaly_score": -0.15650797415451212,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Điều Kỳ Diệu Của Tiệm Tạp Hóa NAMIYA (Tái Bản)",
+      "price": 97587.0,
+      "discount_rate": 30.0,
+      "review_count": 4909.0,
+      "rating": 5.0,
+      "anomaly_score": -0.14942389579763893,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Tâm Lý Học Về Tiền",
+      "price": 143400.0,
+      "discount_rate": 40.0,
+      "review_count": 3800.0,
+      "rating": 4.8,
+      "anomaly_score": -0.1412620906330938,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Artbook - Sách Tiếng Anh - Versace Catwalk",
+      "price": 1930000.0,
+      "discount_rate": 0.0,
+      "review_count": 801.0,
+      "rating": 4.8,
+      "anomaly_score": -0.1357582875080341,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    },
+    {
+      "sku": "",
+      "title": "Sách Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Mềm)",
+      "price": 106875.0,
+      "discount_rate": 29.0,
+      "review_count": 4405.0,
+      "rating": 5.0,
+      "anomaly_score": -0.1347903140361566,
+      "reason": "tổ hợp chỉ số lệch khỏi mẫu chung"
+    }
+  ]
+}

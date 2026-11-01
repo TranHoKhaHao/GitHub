@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Quản Lý Dữ Liệu (CRUD)</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#002113","surface-bright":"#f8f9ff","on-background":"#0b1c30","secondary-container":"#6cf8bb","tertiary-fixed":"#ffddb8","background":"#f8f9ff","on-secondary-container":"#00714d","surface-tint":"#005cba","on-primary-container":"#ffffff","primary":"#005cb9","surface-variant":"#d3e4fe","inverse-surface":"#213145","on-error":"#ffffff","on-error-container":"#93000a","on-surface-variant":"#414753","tertiary-container":"#a66900","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#ffb95f","outline-variant":"#c1c6d6","on-secondary":"#ffffff","secondary":"#006c49","surface-dim":"#cbdbf5","surface":"#f8f9ff","on-tertiary-fixed-variant":"#653e00","on-tertiary-fixed":"#2a1700","secondary-fixed":"#6ffbbe","surface-container-highest":"#d3e4fe","primary-fixed":"#d7e3ff","primary-container":"#0b74e5","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#005236","on-tertiary-container":"#ffffff","error":"#ba1a1a","on-primary-fixed":"#001b3f","inverse-primary":"#abc7ff","outline":"#717785","surface-container-low":"#eff4ff","surface-container":"#e5eeff","on-tertiary":"#ffffff","on-primary-fixed-variant":"#00458e","on-surface":"#0b1c30","error-container":"#ffdad6","secondary-fixed-dim":"#4edea3","primary-fixed-dim":"#abc7ff","surface-container-lowest":"#ffffff","on-primary":"#ffffff","tertiary":"#845300"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","space-md":"0.75rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-lg":"1.25rem","space-sm":"0.5rem","margin":"1rem","gutter":"1rem"},"fontFamily":{"body-md":["Be Vietnam Pro"],"label-sm":["JetBrains Mono"],"headline-sm":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-md":["JetBrains Mono"],"headline-xl":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"data-metric":["JetBrains Mono"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"data-metric":["28px",{"lineHeight":"36px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">E-Commerce Analytics Platform</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">sync</span><span class="font-label-sm text-label-sm uppercase text-secondary tracking-wider">ETL SYNC ACTIVE</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col items-end"><span class="font-headline-sm text-[13px] leading-tight text-on-surface">Quản trị viên</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Admin Root</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="w-full px-margin-desktop bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><nav class="flex items-center gap-space-xl overflow-x-auto" data-active-classes="text-error font-headline-sm border-b-2 border-error"><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="power-bi-dashboard" href="dashboard.html">Power BI Dashboard</a><a class="text-primary font-headline-sm text-headline-sm py-space-sm transition-colors whitespace-nowrap border-b-2 border-primary font-bold" data-path="quan-ly-du-lieu-crud" href="quanlydulieu.html">Quản Lý Dữ Liệu (CRUD)</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="loc-va-tim-kiem" href="locdulieu.html">Lọc &amp; Tìm Kiếm</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="du-doan-ml" href="dudoan.html">Dự Đoán ML</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="he-thong-va-quan-tri" href="quantri.html">Hệ Thống &amp; Quản Trị</a>
+<a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="sao-luu-phuc-hoi" href="saoluu.html">Sao Lưu &amp; Phục Hồi</a>
+<a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="xuat-bao-cao" href="xuatbaocao.html">Kết Xuất Báo Cáo</a></nav></div></header><main class="w-full pt-28 bg-surface px-margin-desktop min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full pb-16 space-y-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-primary font-bold" id="db-source-label">DATABASE: MONGODB ATLAS</span>
+<span>•</span>
+<span class="text-on-surface">COLLECTION: tiki_books</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse" id="db-status-dot"></span>
+          <span id="header-total-sku">0</span> SKU Synced
+        </span>
+<span>•</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">K-Means Engine v2.4 (Active)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Quản Lý Dữ Liệu Sách Tiki &amp; Phân Cụm (CRUD)
+      </h1>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-body-md rounded shadow-sm transition-all active:scale-95" id="btn-sync-kmeans">
+<span class="material-symbols-outlined text-[18px] text-primary">autorenew</span>
+<span>Đồng bộ K-Means</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-body-md rounded shadow-sm transition-all active:scale-95" id="btn-export-csv">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Xuất CSV</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md rounded shadow-md transition-all active:scale-95" id="btn-open-add-modal">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Thêm Sách Mới</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tổng SKU Kho Hàng</span>
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-data-metric text-data-metric text-on-surface" id="kpi-total-sku">0</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span id="kpi-sync-status">MongoDB 100% OK</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cụm 1: Best Seller</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold" id="kpi-c1-pct">0%</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-data-metric text-data-metric text-on-surface"><span id="kpi-c1-count">0</span> <span class="font-body-sm text-body-sm text-on-surface-variant">sách</span></div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5 truncate">Doanh số cao, nhiều reviews</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cụm 3: Tiềm Năng</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold" id="kpi-c3-pct">0%</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-data-metric text-data-metric text-on-surface"><span id="kpi-c3-count">0</span> <span class="font-body-sm text-body-sm text-on-surface-variant">sách</span></div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5 truncate">Rating cao, trending tăng</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cụm 0: Phổ Thông</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold" id="kpi-c0-pct">0%</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-data-metric text-data-metric text-on-surface"><span id="kpi-c0-count">0</span> <span class="font-body-sm text-body-sm text-on-surface-variant">sách</span></div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5 truncate">Giá tầm trung, vòng quay đều</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cụm 2: Cao Cấp</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold" id="kpi-c2-pct">0%</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-data-metric text-data-metric text-on-surface"><span id="kpi-c2-count">0</span> <span class="font-body-sm text-body-sm text-on-surface-variant">sách</span></div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5 truncate">Sách chuyên ngành, học thuật</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="flex flex-1 flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container transition-all" id="search-input" placeholder="Tìm kiếm theo mã SKU, tên sách, tác giả..." type="text" value="" oninput="CRUDApp.handleSearch(this.value)"/>
+</div>
+<div class="w-full sm:w-56">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container transition-all" id="filter-cluster" onchange="CRUDApp.handleFilter(this.value)">
+<option value="ALL">Tất cả Phân Cụm (4 Clusters)</option>
+<option value="1">Cluster 1 - Best Seller</option>
+<option value="3">Cluster 3 - Tiềm Năng</option>
+<option value="0">Cluster 0 - Phổ Thông</option>
+<option value="2">Cluster 2 - Cao Cấp / Học Thuật</option>
+</select>
+</div>
+<div class="w-full sm:w-52">
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container transition-all" id="sort-select" onchange="CRUDApp.handleSort(this.value)">
+<option value="newest">Sắp xếp: Mới nhất</option>
+<option value="price-desc">Giá bán: Cao đến Thấp</option>
+<option value="price-asc">Giá bán: Thấp đến Cao</option>
+<option value="rating-desc">Đánh giá cao nhất</option>
+<option value="reviews-desc">Lượt review nhiều nhất</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-sm justify-between lg:justify-end">
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1 px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-sm rounded transition-colors" id="batch-action-trigger">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+<span>Thao tác loạt (<span id="selected-count">0</span>)</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-sm rounded transition-colors" id="btn-toggle-inspector">
+<span class="material-symbols-outlined text-[18px]">view_sidebar</span>
+<span id="inspector-toggle-text">Ẩn Inspector</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<div class="col-span-12 xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-300" id="table-container">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse min-w-[900px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 w-10 text-center">
+<input class="w-4 h-4 rounded text-primary cursor-pointer accent-primary" id="select-all-checkbox" type="checkbox"/>
+</th>
+<th class="py-3 px-3">Mã SKU</th>
+<th class="py-3 px-4 min-w-[240px]">Tên Sách &amp; Tác Giả / NXB</th>
+<th class="py-3 px-4 text-right">Giá Bán</th>
+<th class="py-3 px-3 text-center">Đánh Giá</th>
+<th class="py-3 px-4 text-right">Reviews</th>
+<th class="py-3 px-4">K-Means Cluster</th>
+<th class="py-3 px-4 text-center">Thao Tác</th>
+</tr>
+</thead>
+<tbody id="crud-table-body" class="font-body-md text-body-md divide-y divide-surface-container-low text-on-surface">
+</tbody>
+</table>
+</div>
+<div id="crud-pagination" class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md">
+</div>
+</div>
+<div class="col-span-12 xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col space-y-space-md sticky top-32 hidden" id="inspector-panel">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface font-bold">Chi Tiết &amp; Cập Nhật Sách</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold" id="active-sku-badge">—</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">model_training</span>
+<span class="font-body-sm text-body-sm text-on-surface">K-Means AI Suggestion</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold" id="inspector-ai-tag">—</span>
+</div>
+<form class="space-y-3.5" id="edit-book-form" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Mã SKU CSDL</label>
+<input class="w-full px-3 py-2 bg-surface-container text-on-surface font-label-md text-label-md rounded cursor-not-allowed" id="inspector-sku" readonly="" type="text" value=""/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Tên Sách Chi Tiết</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="inspector-title" type="text" value=""/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Tác Giả &amp; Nhà Xuất Bản</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="inspector-author" type="text" value=""/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Giá Bán (VND)</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:bg-surface-container" id="inspector-price" type="number" value="0"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Lượt Reviews</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:bg-surface-container" id="inspector-reviews" type="number" value="0"/>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mức Giảm Giá (%)</label>
+<span class="font-label-md text-label-md font-bold text-error" id="discount-val-label">0%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary" id="inspector-discount" max="80" min="0" type="range" value="0" oninput="document.getElementById('discount-val-label').textContent = this.value + '%'"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Đánh Giá (Rating)</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:bg-surface-container" id="inspector-rating" max="5" min="1" step="0.1" type="number" value="0"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Phân Cụm K-Means</label>
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="inspector-cluster-select">
+<option value="0">Cụm 0: Phổ Thông</option>
+<option value="1">Cụm 1: Best Seller</option>
+<option value="2">Cụm 2: Cao Cấp</option>
+<option value="3">Cụm 3: Tiềm Năng</option>
+</select>
+</div>
+</div>
+<div class="pt-space-sm space-y-2">
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md rounded shadow-sm transition-all" id="btn-save-inspector" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Lưu Thay Đổi Bản Ghi</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="flex-1 flex items-center justify-center gap-1 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-sm rounded transition-colors" id="btn-duplicate-inspector" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Nhân Bản</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1 py-2 bg-error-container hover:bg-error hover:text-on-error text-on-error-container font-body-md text-body-sm rounded transition-colors" id="btn-delete-inspector" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Xóa</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="add-book-modal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl p-space-xl m-4 flex flex-col space-y-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[24px]">library_add</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Thêm Sách Mới</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sách sẽ được lưu vào MongoDB và tự động gán cụm</p>
+</div>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant" id="btn-close-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Mã SKU (Tự Sinh)</label>
+<input class="w-full px-3 py-2 bg-surface-container text-on-surface font-label-md text-label-md rounded font-bold" id="modal-new-sku" readonly="" type="text" value=""/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Phân Loại Cụm Dự Kiến</label>
+<select class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none" id="modal-new-cluster">
+<option value="AUTO">Tự động (K-Means AI Predict)</option>
+<option value="1">Cluster 1: Best Seller</option>
+<option value="3">Cluster 3: Tiềm Năng</option>
+<option value="0">Cluster 0: Phổ Thông</option>
+<option value="2">Cluster 2: Cao Cấp</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Tên Tựa Sách <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="modal-new-title" placeholder="VD: Sapiens - Lược Sử Loài Người..." type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Tác Giả &amp; Dịch Giả</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="modal-new-author" placeholder="VD: Yuval Noah Harari" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Nhà Xuất Bản</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:outline-none focus:bg-surface-container" id="modal-new-publisher" placeholder="VD: NXB Tri Thức" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Giá Niêm Yết (VND) <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none" id="modal-new-price" placeholder="189000" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Giảm Giá (%)</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none" id="modal-new-discount" max="90" min="0" type="number" value="20"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Đánh Giá Khởi Tạo (1-5)</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none" id="modal-new-rating" step="0.1" type="number" value="5.0"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Lượt Reviews Khởi Tạo</label>
+<input class="w-full px-3 py-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none" id="modal-new-reviews" type="number" value="12"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-sm">
+<button class="px-space-md py-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md rounded transition-colors" id="btn-cancel-modal" type="button">
+          Hủy Bỏ
+        </button>
+<button class="flex items-center gap-1.5 px-space-lg py-2 bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md rounded shadow-sm transition-all disabled:opacity-60 disabled:cursor-not-allowed" id="btn-submit-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+<span>Lưu Vào CSDL</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="tiki_books_data.js"></script>
+<script src="books-core.js"></script>
+<script src="quanlydulieu-app.js"></script>
+</body></html>

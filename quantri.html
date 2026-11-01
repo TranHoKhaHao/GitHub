@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>E-Commerce Analytics Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#002113","surface-bright":"#f8f9ff","on-background":"#0b1c30","secondary-container":"#6cf8bb","tertiary-fixed":"#ffddb8","background":"#f8f9ff","on-secondary-container":"#00714d","surface-tint":"#005cba","on-primary-container":"#ffffff","primary":"#005cb9","surface-variant":"#d3e4fe","inverse-surface":"#213145","on-error":"#ffffff","on-error-container":"#93000a","on-surface-variant":"#414753","tertiary-container":"#a66900","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#ffb95f","outline-variant":"#c1c6d6","on-secondary":"#ffffff","secondary":"#006c49","surface-dim":"#cbdbf5","surface":"#f8f9ff","on-tertiary-fixed-variant":"#653e00","on-tertiary-fixed":"#2a1700","secondary-fixed":"#6ffbbe","surface-container-highest":"#d3e4fe","primary-fixed":"#d7e3ff","primary-container":"#0b74e5","surface-container-high":"#dce9ff","on-secondary-fixed-variant":"#005236","on-tertiary-container":"#ffffff","error":"#ba1a1a","on-primary-fixed":"#001b3f","inverse-primary":"#abc7ff","outline":"#717785","surface-container-low":"#eff4ff","surface-container":"#e5eeff","on-tertiary":"#ffffff","on-primary-fixed-variant":"#00458e","on-surface":"#0b1c30","error-container":"#ffdad6","secondary-fixed-dim":"#4edea3","primary-fixed-dim":"#abc7ff","surface-container-lowest":"#ffffff","on-primary":"#ffffff","tertiary":"#845300"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","space-md":"0.75rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","space-xl":"2rem","space-lg":"1.25rem","space-sm":"0.5rem","margin":"1rem","gutter":"1rem"},"fontFamily":{"body-md":["Be Vietnam Pro"],"label-sm":["JetBrains Mono"],"headline-sm":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-md":["JetBrains Mono"],"headline-xl":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"data-metric":["JetBrains Mono"]},"fontSize":{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"data-metric":["28px",{"lineHeight":"36px","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[22px]">insights</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">E-Commerce Analytics Platform</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[16px]">sync</span><span class="font-label-sm text-label-sm uppercase text-secondary tracking-wider">ETL SYNC ACTIVE</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col items-end"><span class="font-headline-sm text-[13px] leading-tight text-on-surface">Quản trị viên</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Admin Root</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="w-full px-margin-desktop bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><nav class="flex items-center gap-space-xl overflow-x-auto" data-active-classes="text-error font-headline-sm border-b-2 border-error"><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="power-bi-dashboard" href="dashboard.html">Power BI Dashboard</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="quan-ly-du-lieu-crud" href="quanlydulieu.html">Quản Lý Dữ Liệu (CRUD)</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="loc-va-tim-kiem" href="locdulieu.html">Lọc &amp; Tìm Kiếm</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="du-doan-ml" href="dudoan.html">Dự Đoán ML</a><a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="he-thong-va-quan-tri" href="quantri.html">Hệ Thống &amp; Quản Trị</a>
+<a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="sao-luu-phuc-hoi" href="saoluu.html">Sao Lưu &amp; Phục Hồi</a>
+<a class="text-on-surface-variant hover:text-on-surface py-space-sm font-headline-sm text-headline-sm transition-colors whitespace-nowrap" data-path="xuat-bao-cao" href="xuatbaocao.html">Kết Xuất Báo Cáo</a></nav></div></header><main class="w-full pt-28 bg-surface px-margin-desktop min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full pb-16">
+<!-- Top Secondary Sub-Navigation / Streamlit Sub-Tab Strip -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm mb-space-lg p-space-xs">
+<div class="flex items-center gap-space-sm overflow-x-auto">
+<button class="subtab-item flex items-center gap-space-sm px-space-lg py-space-sm rounded-lg font-headline-sm text-headline-sm transition-all text-on-primary bg-primary shadow-sm" id="subtab-btn-auth" onclick="switchSubTab('auth')">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>🔐 Xác Thực Người Dùng</span>
+</button>
+<button class="subtab-item flex items-center gap-space-sm px-space-lg py-space-sm rounded-lg font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" id="subtab-btn-backup" onclick="window.location.href='saoluu.html'">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>💾 Sao Lưu &amp; Phục Hồi CSDL (TV1)</span>
+</button>
+<button class="subtab-item flex items-center gap-space-sm px-space-lg py-space-sm rounded-lg font-headline-sm text-headline-sm transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" id="subtab-btn-export" onclick="window.location.href='xuatbaocao.html'">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>📊 Kết Xuất Báo Cáo</span>
+</button>
+</div>
+</div>
+<!-- Page Title Banner (Streamlit Header Block) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-error font-bold">Admin Root Session #SYS-9024</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface flex items-center gap-space-sm">
+<span>⚙️ Quản Trị Hệ Thống &amp; Báo Cáo</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Quản lý tài khoản bảo mật, sao lưu cơ sở dữ liệu MongoDB Atlas (TV1) và vận hành hệ thống dữ liệu lớn của sàn thương mại điện tử Tiki.
+        </p>
+</div>
+<!-- Quick Metrics Strip in Header -->
+<div class="flex items-center gap-space-md">
+<div class="bg-surface-container-low px-space-lg py-space-sm rounded-lg flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cluster Health</span>
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+            99.98% OK
+          </span>
+</div>
+<div class="bg-surface-container-low px-space-lg py-space-sm rounded-lg flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Database TV1</span>
+<span class="font-label-md text-label-md text-primary font-bold">tiki_warehouse_v3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTAB CONTENT 1: AUTHENTICATION -->
+<div class="subtab-panel flex flex-col gap-space-lg" id="panel-auth">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Admin Login Form (Streamlit Mockup Container) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-fixed flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Phiên Đăng Nhập Quản Trị Viên</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Xác thực chứng thư bảo mật để truy cập bảng kiểm soát Mongo Cluster</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-semibold">Tier-1 Root</span>
+</div>
+<!-- Streamlit Input Widget Box -->
+<form class="flex flex-col gap-space-md" onsubmit="handleAdminLogin(event)">
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-[13px] text-on-surface flex items-center justify-between">
+<span>Tên đăng nhập (Username)</span>
+<span class="font-label-sm text-label-sm text-primary">Required *</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">account_circle</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-low shadow-sm" id="login-username" placeholder="Nhập ID quản trị viên..." required="" type="text" value="admin_tiki_data_ops"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-headline-sm text-[13px] text-on-surface flex items-center justify-between">
+<span>Mật khẩu bảo mật (Password)</span>
+<span class="font-label-sm text-label-sm text-outline">TLS SHA-256</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">key</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-10 pr-4 py-2.5 rounded-lg focus:outline-none focus:bg-surface-container-low shadow-sm" id="login-password" placeholder="Nhập mật khẩu..." required="" type="password" value="••••••••••••••••"/>
+</div>
+</div>
+<!-- St.Radio Role Simulation -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<span class="font-headline-sm text-[13px] text-on-surface">Cấp độ phân quyền (Scope Enforcement)</span>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input checked="" class="accent-primary" name="scope_role" type="radio" value="sysadmin"/>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">SysAdmin Full</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input class="accent-primary" name="scope_role" type="radio" value="dba"/>
+<span class="font-body-sm text-body-sm text-on-surface">DBA Engineer</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container">
+<input class="accent-primary" name="scope_role" type="radio" value="analyst"/>
+<span class="font-body-sm text-body-sm text-on-surface">ML Auditor</span>
+</label>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="flex-1 bg-primary text-on-primary font-headline-sm text-headline-sm py-2.5 px-space-lg rounded-lg shadow-sm hover:bg-primary-container active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" id="btn-login-submit" type="submit">
+<span class="material-symbols-outlined text-[20px]">login</span>
+<span>Đăng Nhập Hệ Thống</span>
+</button>
+<button class="bg-surface-container-low text-on-surface-variant font-headline-sm text-headline-sm py-2.5 px-space-lg rounded-lg hover:bg-surface-container transition-all" onclick="resetLoginForm()" type="button">
+              Đặt lại
+            </button>
+</div>
+</form>
+<!-- Streamlit Alert Notice Box -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-sm" id="login-feedback-box">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Phiên hiện tại: Đã xác thực (Session Active)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tài khoản admin_tiki_data_ops đang nắm giữ token JWT hợp lệ tới 18:30:00 ICT. Đầy đủ quyền ghi (CRUD) và Execute Backup.</span>
+</div>
+</div>
+</div>
+<!-- Access Control & Security Matrix (Side Inspector) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bảo Mật &amp; Phiên Vận Hành</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-primary font-bold">RBAC Policy</span>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">vpn_lock</span>
+<div>
+<div class="font-headline-sm text-[13px] text-on-surface">IP Whitelist MongoDB Atlas</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">10.142.8.0/24 (VPC Peering)</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">CONNECTED</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">lock_clock</span>
+<div>
+<div class="font-headline-sm text-[13px] text-on-surface">Mã Hóa Lưu Trữ (AES-256)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">AWS KMS Master Key #774-TV1</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">ACTIVE</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[18px]">security_update_warning</span>
+<div>
+<div class="font-headline-sm text-[13px] text-on-surface">Cảnh Báo Brute-force</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Giới hạn 5 lần thử / 15 phút</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold">0 LOCKED</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-space-xs">Audit Logs Gần Đây:</div>
+<div class="bg-surface-container rounded-lg p-space-sm font-label-sm text-[11px] text-on-surface space-y-1">
+<div class="flex justify-between"><span>14:02:18</span> <span class="text-secondary">[AUTH] Token issued user=admin</span></div>
+<div class="flex justify-between"><span>13:45:09</span> <span class="text-primary">[READ] ETL Sync batch #9921 ok</span></div>
+<div class="flex justify-between"><span>12:30:11</span> <span class="text-on-surface-variant">[BACKUP] Auto-snapshot AWS created</span></div>
+</div>
+</div>
+</div>
+<!-- High-density Tech Overview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">database</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Engine Cluster Architecture</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">MongoDB 7.0 Enterprise Atlas</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Shard 01 + Shard 02: 48,290 Tiki Records</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTAB CONTENT 2: DATABASE BACKUP & RESTORE (TV1) -->
+<div class="subtab-panel hidden flex-col gap-space-lg" id="panel-backup">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Panel: Execution Terminal & Commands -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Công Cụ Sao Lưu &amp; Phục Hồi Dữ Liệu</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mô phỏng thực thi Bash Command mongodump và mongorestore cho phân vùng TV1</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-semibold">Tiki Books Pipeline TV1</span>
+</div>
+<!-- Bash Command Preview 1: Mongodump -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[13px] text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+              1. Lệnh Trích Xuất Dữ Liệu (mongodump)
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Archive gzip compression</span>
+</div>
+<div class="bg-inverse-surface rounded-lg p-space-md shadow-inner text-inverse-on-surface font-label-md text-label-md overflow-x-auto relative">
+<span class="text-tertiary-fixed-dim">$</span> mongodump --uri="mongodb+srv://admin:******@tiki-cluster.vn.mongodb.net/tv1_db" \
+  --collection=tiki_books \
+  --archive="/var/backups/tiki_books_dump.tar.gz" --gzip
+          </div>
+</div>
+<!-- Bash Command Preview 2: Mongorestore -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[13px] text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">settings_backup_restore</span>
+              2. Lệnh Khôi Phục Dữ Liệu (mongorestore)
+            </span>
+<span class="font-label-sm text-label-sm text-error uppercase">Danger: Overwrite Target</span>
+</div>
+<div class="bg-inverse-surface rounded-lg p-space-md shadow-inner text-inverse-on-surface font-label-md text-label-md overflow-x-auto relative">
+<span class="text-tertiary-fixed-dim">$</span> mongorestore --uri="mongodb+srv://admin:******@tiki-cluster.vn.mongodb.net/tv1_db" \
+  --nsInclude="tv1_db.tiki_books" \
+  --archive="/var/backups/tiki_books_dump.tar.gz" --gzip --drop
+          </div>
+</div>
+<!-- Control Action Buttons -->
+<div class="pt-space-xs flex flex-wrap items-center gap-space-md">
+<button class="bg-primary text-on-primary font-headline-sm text-headline-sm py-3 px-space-xl rounded-lg shadow-sm hover:bg-primary-container active:scale-[0.99] transition-all flex items-center gap-space-sm" id="btn-run-backup" onclick="executeBackupSimulation()">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span>Thực Thi Sao Lưu (Run mongodump)</span>
+</button>
+<button class="bg-surface-container-high text-error font-headline-sm text-headline-sm py-3 px-space-xl rounded-lg hover:bg-error-container hover:text-on-error-container transition-all flex items-center gap-space-sm" id="btn-run-restore" onclick="executeRestoreSimulation()">
+<span class="material-symbols-outlined text-[20px]">restore_page</span>
+<span>Thực Thi Phục Hồi (Run mongorestore)</span>
+</button>
+</div>
+<!-- Streamlit Dynamic Terminal Console Output -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Streamlit Execution Logger:</span>
+<span class="font-label-sm text-label-sm text-secondary" id="terminal-badge">READY</span>
+</div>
+<div class="bg-inverse-surface rounded-lg p-space-md text-inverse-on-surface font-label-sm text-[12px] h-36 overflow-y-auto space-y-1" id="terminal-output">
+<div class="text-outline-variant">[System initialized] Connected to Atlas Gateway MongoDB v7.0.3</div>
+<div class="text-outline-variant">[Target Database] tv1_db (Collection: tiki_books - Total records: 48,290)</div>
+<div class="text-secondary-fixed">[Status Ready] Awaiting user trigger for mongodump or mongorestore...</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Snapshot File Registry & Specs -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Target File Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Tệp Lưu Trữ Dự Phòng</span>
+<span class="material-symbols-outlined text-primary text-[22px]">inventory_2</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tên Tệp Đích:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">tiki_books_dump.tar.gz</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Kích Thước Nén:</span>
+<span class="font-data-metric text-[20px] text-on-surface font-bold" id="file-size-badge">42.84 MB</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Thuật Toán Nén:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">GZIP Multi-threaded</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Lần Tạo Gần Nhất:</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="last-backup-timestamp">Hôm nay, 14:15:22 ICT</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] text-on-surface font-semibold">MD5 Checksum Hợp Lệ</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-mono truncate max-w-[200px]">e4d909c290d0fb1ca068ffaddf22cbd0</span>
+</div>
+</div>
+</div>
+<!-- Retention Policy Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Chính Sách Lưu Trữ Snapshot</h4>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check</span>
+<span>Lưu trữ cục bộ tự động xoay vòng 7 ngày (Local Rotational).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check</span>
+<span>Đồng bộ định kỳ 00:00 hàng ngày lên S3 Cold Storage Glacier.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">check</span>
+<span>Zero-downtime MongoDB ReplicaSet Write Locking (TV1).</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTAB CONTENT 3: REPORT EXPORT (KẾT XUẤT BÁO CÁO) -->
+<div class="subtab-panel hidden flex-col gap-space-lg" id="panel-export">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Kết Xuất &amp; Bàn Giao Dữ Liệu Sàn Tiki</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sử dụng Streamlit download button components (st.download_button) để tải về tệp phân tích tổng hợp và dữ liệu thô</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Data Ready for Extraction</span>
+</div>
+</div>
+<!-- Action Card Pair (Download Buttons Showcase) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg pt-space-xs">
+<!-- PDF Export Card -->
+<div class="bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">picture_as_pdf</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-error font-bold tracking-wider">BÁO CÁO TỔNG QUAN GIÁM ĐỐC</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Báo Cáo Tổng Hợp PDF (Mockup)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Bao gồm biểu đồ doanh số toàn sàn, phân bổ danh mục ngành hàng sách Tiki, độ tin cậy mô hình học máy Random Forest và khuyến nghị chiến lược kinh doanh quý.
+              </p>
+</div>
+<!-- PDF Mockup Highlights -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Khổ A4 Executive, tích hợp đồ thị Seaborn &amp; Power BI</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Dung lượng ước tính: 4.6 MB (Bao gồm biểu đồ Vector)</span>
+</div>
+</div>
+</div>
+<!-- St.Download Button 1 -->
+<div>
+<button class="w-full bg-error text-on-error font-headline-sm text-headline-sm py-3.5 px-space-xl rounded-lg shadow-sm hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" id="btn-download-pdf" onclick="simulateDownload('pdf')">
+<span class="material-symbols-outlined text-[22px]">download</span>
+<span>📄 Xuất Báo Cáo Tổng Hợp PDF (Mockup)</span>
+</button>
+<p class="text-center font-label-sm text-[11px] text-on-surface-variant mt-2">Tên tệp dự kiến: TIKI_ANALYTICS_EXECUTIVE_REPORT_2025.pdf</p>
+</div>
+</div>
+<!-- CSV Export Card -->
+<div class="bg-surface-container-low rounded-xl p-space-xl flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">table_view</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">DỮ LIỆU ĐỊNH DẠNG BẢNG RAW</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">Xuất Toàn Bộ Dữ Liệu CSV</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Trích xuất toàn bộ 48,290 bản ghi sản phẩm Sách Tiki kèm thông tin giá gốc, khuyến mãi, đánh giá số sao, số lượt nhận xét và nhãn phân loại ML pipeline.
+              </p>
+</div>
+<!-- CSV Mockup Highlights -->
+<div class="space-y-1.5 pt-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Bộ mã UTF-8 with BOM (tương thích trực tiếp Excel tiếng Việt)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Định dạng chuẩn CSV phân cách bằng dấu phẩy tiêu chuẩn</span>
+</div>
+</div>
+</div>
+<!-- St.Download Button 2 -->
+<div>
+<button class="w-full bg-secondary text-on-secondary font-headline-sm text-headline-sm py-3.5 px-space-xl rounded-lg shadow-sm hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm" id="btn-download-csv" onclick="simulateDownload('csv')">
+<span class="material-symbols-outlined text-[22px]">file_save</span>
+<span>📊 Xuất Toàn Bộ Dữ Liệu CSV</span>
+</button>
+<p class="text-center font-label-sm text-[11px] text-on-surface-variant mt-2">Tên tệp dự kiến: tiki_books_clean_dataset_2025.csv (16.2 MB)</p>
+</div>
+</div>
+</div>
+<!-- Export Notification Toast Simulation -->
+<div class="hidden p-space-md rounded-lg bg-surface-container-high items-center justify-between transition-all" id="export-toast">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface" id="toast-title">Bắt đầu tải tệp thành công!</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-msg">Đã khởi tạo luồng dữ liệu Streamlit st.download_button.</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('export-toast').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchSubTab(tabKey) {
+    const tabs = ['auth', 'backup', 'export'];
+    tabs.forEach(t => {
+      const panel = document.getElementById('panel-' + t);
+      const btn = document.getElementById('subtab-btn-' + t);
+      if (t === tabKey) {
+        panel.classList.remove('hidden');
+        panel.classList.add('flex');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-low');
+      } else {
+        panel.classList.add('hidden');
+        panel.classList.remove('flex');
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant', 'hover:bg-surface-container-low');
+      }
+    });
+  }
+
+  function handleAdminLogin(event) {
+    event.preventDefault();
+    const btn = document.getElementById('btn-login-submit');
+    const feedback = document.getElementById('login-feedback-box');
+    const uName = document.getElementById('login-username').value;
+    
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> <span>Đang xác thực...</span>';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">login</span> <span>Đăng Nhập Hệ Thống</span>';
+      btn.disabled = false;
+      feedback.classList.remove('bg-surface-container-low');
+      feedback.classList.add('bg-surface-container-high');
+      feedback.innerHTML = `
+        <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-on-surface">Đăng nhập thành công! Phiên Root Admin đã kích hoạt.</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Chào mừng <b>${uName}</b>. Khóa bảo mật OAuth2 Tiki được cấp phép với đầy đủ quyền CRUD và MongoDB Engine TV1.</span>
+        </div>
+      `;
+    }, 700);
+  }
+
+  function resetLoginForm() {
+    document.getElementById('login-username').value = '';
+    document.getElementById('login-password').value = '';
+  }
+
+  function executeBackupSimulation() {
+    const btn = document.getElementById('btn-run-backup');
+    const term = document.getElementById('terminal-output');
+    const badge = document.getElementById('terminal-badge');
+    const lastTime = document.getElementById('last-backup-timestamp');
+
+    btn.disabled = true;
+    badge.innerText = 'RUNNING DUMP...';
+    badge.className = 'font-label-sm text-label-sm text-primary animate-pulse';
+
+    const now = new Date().toLocaleTimeString('vi-VN');
+    term.innerHTML += `<div class="text-primary font-bold">[${now}] $ Executing mongodump --uri="mongodb+srv://.../tv1_db" --archive...</div>`;
+    term.innerHTML += `<div class="text-surface-variant">[+] Scanning collections in tv1_db...</div>`;
+    term.scrollTop = term.scrollHeight;
+
+    setTimeout(() => {
+      term.innerHTML += `<div class="text-surface-variant">[+] Dumping tv1_db.tiki_books: 48,290 metadata docs processed (100%)</div>`;
+      term.innerHTML += `<div class="text-secondary-fixed font-bold">[SUCCESS] File compressed: tiki_books_dump.tar.gz (42.84 MB) -> Saved to /var/backups</div>`;
+      term.scrollTop = term.scrollHeight;
+      badge.innerText = 'DUMP COMPLETED';
+      badge.className = 'font-label-sm text-label-sm text-secondary font-bold';
+      lastTime.innerText = 'Vừa tạo lúc ' + now + ' ICT';
+      btn.disabled = false;
+    }, 1200);
+  }
+
+  function executeRestoreSimulation() {
+    const btn = document.getElementById('btn-run-restore');
+    const term = document.getElementById('terminal-output');
+    const badge = document.getElementById('terminal-badge');
+
+    btn.disabled = true;
+    badge.innerText = 'RESTORING...';
+    badge.className = 'font-label-sm text-label-sm text-error animate-pulse';
+
+    const now = new Date().toLocaleTimeString('vi-VN');
+    term.innerHTML += `<div class="text-error font-bold">[${now}] $ Executing mongorestore --drop --archive="/var/backups/tiki_books_dump.tar.gz"...</div>`;
+    term.innerHTML += `<div class="text-surface-variant">[!] Dropping current collection tv1_db.tiki_books for clean sync...</div>`;
+    term.scrollTop = term.scrollHeight;
+
+    setTimeout(() => {
+      term.innerHTML += `<div class="text-surface-variant">[+] Restoring 48,290 documents from archive index chunk...</div>`;
+      term.innerHTML += `<div class="text-secondary-fixed font-bold">[RESTORE SUCCESS] Rebuilt indexes: _id_, price_1, category_id_1. DB TV1 Healthy!</div>`;
+      term.scrollTop = term.scrollHeight;
+      badge.innerText = 'RESTORE READY';
+      badge.className = 'font-label-sm text-label-sm text-secondary font-bold';
+      btn.disabled = false;
+    }, 1400);
+  }
+
+  function simulateDownload(type) {
+    const toast = document.getElementById('export-toast');
+    const title = document.getElementById('toast-title');
+    const msg = document.getElementById('toast-msg');
+
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+
+    if (type === 'pdf') {
+      title.innerText = 'Đang tải về: TIKI_ANALYTICS_EXECUTIVE_REPORT_2025.pdf';
+      msg.innerText = 'Đã hoàn tất biên dịch báo cáo tổng hợp. Dung lượng 4.6 MB sẵn sàng xem trên máy tính.';
+    } else {
+      title.innerText = 'Đang tải về: tiki_books_clean_dataset_2025.csv';
+      msg.innerText = 'Đã trích xuất 48,290 bản ghi sách định dạng CSV UTF-8. Tệp lưu tại thư mục Tải về của bạn.';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><div>© 2025 E-Commerce Analytics Platform. All rights reserved.</div><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm uppercase">Engine v3.12 ML-Ready</span><span class="font-label-sm text-label-sm uppercase text-secondary">Status: Operational</span></div></div></footer></body></html>
